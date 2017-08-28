@@ -1,0 +1,60 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+021     main.@SCRATCH1
+022     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+000021  @cinit2
+
+Project Directory:
+    D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\Primeira Tarefa C\
+
+Project Files:
+    rafaelalevato.c                                         [28-ago-17 10:06  CRC=141CFCDC]
+    C:\Program Files (x86)\PICC\devices\16F628A.h           [21-jul-17 14:50  CRC=BF35D8E8]
+
+Source signature=9288AEAC
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=9163
+
+Units:
+    rafaelalevato (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    ICD Provisions: Yes
+    Compile Mode:       CCS5
+    Predefined symbols:
+       #define __DEBUG 1
+       #define __16F628A TRUE
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      rafaelalevato.err
+    INHX8:       rafaelalevato.hex
+    Symbols:     rafaelalevato.sym
+    List:        rafaelalevato.lst
+    Debug/COFF:  rafaelalevato.cof
+    Project:     rafaelalevato.ccspjt
+    Call Tree:   rafaelalevato.tre
+    Statistics:  rafaelalevato.STA

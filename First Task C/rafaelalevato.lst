@@ -1,0 +1,122 @@
+CCS PCM C Compiler, Version 5.074d, 1               28-ago-17 10:06
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\Primeira Tarefa C\rafaelalevato.lst
+
+               ROM used:   58 words (3%)
+                           Largest free fragment is 1990
+               RAM used:   6 (3%) at main() level
+                           7 (3%) worst case
+               Stack used: 0 locations
+               Stack size: 7
+
+*
+0000:  NOP
+0001:  MOVLW  00
+0002:  MOVWF  0A
+0003:  GOTO   019
+.................... //Programa : Pisca LED com PIC16F628A 
+.................... //Autor : FILIPEFLOP 
+....................  
+.................... //Carrega a biblioteca para o microcontrolador PIC16F628A 
+.................... #include <16F628A.h> 
+.................... //////////// Standard Header file for the PIC16F628A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F628A 
+....................  
+.................... #list 
+....................  
+....................  
+.................... //Configuracao FUSES 
+.................... #FUSES NOWDT 
+.................... #FUSES INTRC_IO 
+.................... #FUSES NOPUT 
+.................... #FUSES NOPROTECT 
+.................... #FUSES NOBROWNOUT 
+.................... #FUSES NOMCLR 
+.................... #FUSES NOLVP 
+.................... #FUSES NOCPD 
+....................  
+.................... //Define a utilização do clock interno de 4 Mhz 
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  22
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETURN
+....................  
+.................... #define PINOLED PIN_B2 //Pino ao qual o led esta ligado 
+....................  
+.................... void main() 
+0019:  MOVF   03,W
+001A:  ANDLW  1F
+001B:  MOVWF  03
+001C:  BSF    03.5
+001D:  BSF    0E.3
+001E:  MOVLW  07
+001F:  BCF    03.5
+0020:  MOVWF  1F
+0021:  BCF    03.7
+.................... { 
+.................... while (1) 
+....................  { 
+....................   output_bit(PINOLED, TRUE); // Liga o Led 
+0022:  BSF    06.2
+0023:  BSF    03.5
+0024:  BCF    06.2
+....................   delay_ms(5000); // Aguarda 3 segundos 
+0025:  MOVLW  14
+0026:  BCF    03.5
+0027:  MOVWF  21
+0028:  MOVLW  FA
+0029:  MOVWF  22
+002A:  CALL   004
+002B:  DECFSZ 21,F
+002C:  GOTO   028
+....................   output_bit(PINOLED, FALSE); // Desliga o Led 
+002D:  BCF    06.2
+002E:  BSF    03.5
+002F:  BCF    06.2
+....................   delay_ms(2000); // Aguarda 2 segundos 
+0030:  MOVLW  08
+0031:  BCF    03.5
+0032:  MOVWF  21
+0033:  MOVLW  FA
+0034:  MOVWF  22
+0035:  CALL   004
+0036:  DECFSZ 21,F
+0037:  GOTO   033
+0038:  GOTO   022
+....................  } 
+.................... } 
+0039:  GOTO   039
+
+Configuration Fuses:
+   Word  1: 3F18   NOWDT NOPUT INTRC_IO NOMCLR NOBROWNOUT NOLVP NOCPD NOPROTECT
+
+   Some fuses have been forced to be compatible with the ICD debugger.
