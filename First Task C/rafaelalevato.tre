@@ -1,5 +1,16 @@
 ÀÄ17
-   ÀÄmain  0/33  Ram=1
+   ÀÄmain  0/157  Ram=26
       ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@MULS1616  0/46  Ram=6
+      ÃÄ@MULS1616  0/46  Ram=6
+      ÃÄrotatePortB  0/158  Ram=6
+      ³  ÃÄ@MULS1616  0/46  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@DIVS1616  (Inline)  Ram=6
+      ³  ÃÄ@MULS1616  0/46  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÀÄ@WRITEBITA  0/32  Ram=6
+      ÃÄ@MULS1616  0/46  Ram=6
       ÃÄ@delay_ms1  0/21  Ram=1
       ÀÄ@delay_ms1  0/21  Ram=1
