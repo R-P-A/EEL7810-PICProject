@@ -1,0 +1,71 @@
+MPLINK 4.39, Linker
+Linker Map File - Created Mon Aug 28 18:31:37 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000098
+.config_2007_RAFAELALEVATO.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00004b      
+                            0x002007    0x002007      
+            77 out of 2182 program addresses used, program memory utilization is 3%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     DEC1   0x00002a    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   DECSPD   0x000039    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                    DELAY   0x000026    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                    IFROT   0x000013    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   IFSPD1   0x00001c    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   IFSPD2   0x00001e    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   INCSPD   0x00003e    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+               INITCONFIG   0x000001    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                KEY4PRESS   0x000043    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                     LOOP   0x000011    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   MDELAY   0x000022    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   RESET1   0x000028    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                     RETD   0x000023    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  ROTATEL   0x00002f    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  ROTATER   0x000034    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  SETDIR0   0x000048    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  SETDIR1   0x00004a    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   SETSPD   0x000020    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  STDLEFT   0x000016    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                 STDRIGHT   0x000019    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+               INITCONFIG   0x000001    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                     LOOP   0x000011    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                    IFROT   0x000013    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  STDLEFT   0x000016    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                 STDRIGHT   0x000019    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   IFSPD1   0x00001c    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   IFSPD2   0x00001e    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   SETSPD   0x000020    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   MDELAY   0x000022    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                     RETD   0x000023    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                    DELAY   0x000026    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   RESET1   0x000028    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                     DEC1   0x00002a    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  ROTATEL   0x00002f    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  ROTATER   0x000034    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   DECSPD   0x000039    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                   INCSPD   0x00003e    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                KEY4PRESS   0x000043    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  SETDIR0   0x000048    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+                  SETDIR1   0x00004a    program     static D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Primeira Tarefa\rafaelalevato.asm
+
+

@@ -1,0 +1,87 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020-021 rotatePortB.index
+022-031 main.portB
+032-033 main.direction
+034-035 main.defaultDirection
+036-037 main.delayMultplier
+038.0   main.isKey4Pressed
+039-03A rotatePortB.portB
+039     main.@SCRATCH1
+03A     main.@SCRATCH2
+03B-03C rotatePortB.direction
+03B     main.@SCRATCH3
+03C     @delay_ms1.P1
+03D-03E @MULS1616.P1
+03D     rotatePortB.@SCRATCH1
+03E     rotatePortB.@SCRATCH2
+03F-040 @MULS1616.P1
+03F-040 @DIVS1616.P2
+03F     @WRITEBITA.P3
+040     @WRITEBITA.P1
+041-042 @DIVS1616.P1
+041-042 @WRITEBITA.P2
+041     @MULS1616.@SCRATCH1
+042     @MULS1616.@SCRATCH2
+043     @DIVS1616.@SCRATCH1
+044     @DIVS1616.@SCRATCH2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  @MULS1616
+000032  @WRITEBITA
+000052  rotatePortB
+00008B  @DIVS1616
+0000F0  @delay_ms1
+000105  main
+000105  @cinit1
+00010F  @cinit2
+
+Project Directory:
+    D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\First Task C\
+
+Project Files:
+    rafaelalevato.c                                         [29-ago-17 01:30  CRC=58947AE8]
+    C:\Program Files (x86)\PICC\devices\16F628A.h           [21-jul-17 14:50  CRC=BF35D8E8]
+
+Source signature=D7002CB8
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=2470
+
+Units:
+    rafaelalevato (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    ICD Provisions: Yes
+    Compile Mode:       CCS5
+    Predefined symbols:
+       #define __DEBUG 1
+       #define __16F628A TRUE
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      rafaelalevato.err
+    INHX8:       rafaelalevato.hex
+    Symbols:     rafaelalevato.sym
+    List:        rafaelalevato.lst
+    Debug/COFF:  rafaelalevato.cof
+    Project:     rafaelalevato.ccspjt
+    Call Tree:   rafaelalevato.tre
+    Statistics:  rafaelalevato.STA
