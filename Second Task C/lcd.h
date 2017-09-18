@@ -26,7 +26,7 @@ void send_nibble_lcd(int data) {
 
 	// Generates an enable pulse
 	output_high(lcd_enable);
-	delay_us(1);  // Delay to stabilize the LCD
+	delay_us(10);  // Delay to stabilize the LCD
 	output_low(lcd_enable);
 	return;
 }
