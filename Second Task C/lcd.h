@@ -63,7 +63,7 @@ void clean_lcd() {
 /**	Initialize LCD with cursor ready to write a character.
  *	The parameters are the pins for data. Always call this first.
  */
-void initialize_lcd(int16 d4, int16 d5, int16 d6, int16 d7, int16 enable_pin, int16 register_select) {
+void initialize_lcd(int16 enable_pin, int16 register_select, int16 d4, int16 d5, int16 d6, int16 d7) {
 	// Make sure the pins are at 0
 	lcd_d4 = d4;
 	lcd_d5 = d5;
