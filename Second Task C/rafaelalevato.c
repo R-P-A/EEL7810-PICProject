@@ -7,19 +7,19 @@
 #define trisa 0b00000000
 #define trisb 0b11110001
 
-#define button_1 pin_b4
-#define button_2 pin_b5
-#define button_3 pin_b6
-#define button_4 pin_b7
-
-#define blink_led pin_b1
-
 #define enbale_lcd pin_b2
 #define rs_lcd pin_b3
 #define data_1 pin_a0
 #define data_2 pin_a1
 #define data_3 pin_a2
 #define data_4 pin_a3
+
+#define button_1 pin_b4
+#define button_2 pin_b5
+#define button_3 pin_b6
+#define button_4 pin_b7
+
+#define blink_led pin_b1
 
 // Global variables used in interruptions
 int1 interrupt_portb_flag = false;
@@ -42,7 +42,7 @@ void main() {
 
 	setup_timer_1(t1_internal | t1_div_by_8);
 
-	initialize_lcd(pin_b2, pin_b3, pin_a0, pin_a1, pin_a2, pin_a3);
+	initialize_lcd(enbale_lcd, rs_lcd, data_1, data_2, data_3, data_4);
 
 	clean_lcd();
 
@@ -50,18 +50,18 @@ void main() {
 	
 	printf(write_lcd,"Int B(4-7): 0000");
 
-	int16 countB = 0;
-	int1 ledWasOut = false;
-	int1 secondTimer1Pass = false;
+	int16 count_int_portb = 0;
+	int1 led_was_out = false;
+	int1 second_timer1_pass = false;
 
 	while(true) {
 		if (interrupt_portb_flag) {
 			interrupt_portb_flag = false;
 			// This interruption is on button change, so we check if button is pressed to count only once.
-			if (!input(pin_b7) || !input(pin_b6) || !input(pin_b5) || !input(pin_b4)) {
-				countB = countB + 1;
+			if (is_button_pressed(button_1) || is_button_pressed(button_2) || is_button_pressed(button_3) || is_button_pressed(button_4)) {
+				count_int_portb = count_int_portb + 1;
 				start_character(1, 13);
-				char* number = intToChar(countB);
+				char* number = intToChar(count_int_portb);
 				for (int i = 0; i < 4; i++) {
 					write_lcd(number[i]);
 				}
@@ -70,17 +70,17 @@ void main() {
 
 		if (interrupt_timer1_flag) {
 			interrupt_timer1_flag = false;
-			if (secondTimer1Pass) {
-				secondTimer1Pass = false;
-				if (ledWasOut) {
-					output_bit(pin_b1, 0);
-					ledWasOut = false;
+			if (second_timer1_pass) {
+				second_timer1_pass = false;
+				if (led_was_out) {
+					output_bit(blink_led, 0);
+					led_was_out = false;
 				} else {
-					output_bit(pin_b1, 1);
-					ledWasOut = true;
+					output_bit(blink_led, 1);
+					led_was_out = true;
 				}
 			} else {
-				secondTimer1Pass = true;
+				second_timer1_pass = true;
 			}
 		}
 	}
