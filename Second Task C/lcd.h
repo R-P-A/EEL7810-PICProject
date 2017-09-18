@@ -6,10 +6,11 @@
  *	@brief Functions to use LCD for PIC16F628A
  */
 
-int16 lcd_d4;
-int16 lcd_d5;
-int16 lcd_d6;
-int16 lcd_d7;
+// LCD pins used by all functions
+int16 lcd_data_4;
+int16 lcd_data_5;
+int16 lcd_data_6;
+int16 lcd_data_7;
 int16 lcd_enable;
 int16 lcd_rs;
 
@@ -19,10 +20,10 @@ int16 lcd_rs;
  */
 void send_nibble_lcd(int data) {
 	// Load the nibble from the data to the LCD pins
-	output_bit(lcd_d4, bit_test(data,0));
-	output_bit(lcd_d5, bit_test(data,1));
-	output_bit(lcd_d6, bit_test(data,2));
-	output_bit(lcd_d7, bit_test(data,3));
+	output_bit(lcd_data_4, bit_test(data,0));
+	output_bit(lcd_data_5, bit_test(data,1));
+	output_bit(lcd_data_6, bit_test(data,2));
+	output_bit(lcd_data_7, bit_test(data,3));
 
 	// Generates an enable pulse
 	output_high(lcd_enable);
@@ -63,19 +64,19 @@ void clean_lcd() {
 /**	Initialize LCD with cursor ready to write a character.
  *	The parameters are the pins for data. Always call this first.
  */
-void initialize_lcd(int16 enable_pin, int16 register_select, int16 d4, int16 d5, int16 d6, int16 d7) {
+void initialize_lcd(int16 enable_pin, int16 register_select, int16 data_4, int16 data_5, int16 data_6, int16 data_7) {
 	// Make sure the pins are at 0
-	lcd_d4 = d4;
-	lcd_d5 = d5;
-	lcd_d6 = d6;
-	lcd_d7 = d7;
+	lcd_data_4 = data_4;
+	lcd_data_5 = data_5;
+	lcd_data_6 = data_6;
+	lcd_data_7 = data_7;
 	lcd_enable = enable_pin;
 	lcd_rs = register_select;
 
-	output_low(lcd_d4);
-	output_low(lcd_d5);
-	output_low(lcd_d6);
-	output_low(lcd_d7);
+	output_low(lcd_data_4);
+	output_low(lcd_data_5);
+	output_low(lcd_data_6);
+	output_low(lcd_data_7);
 	output_low(lcd_rs);
 	output_low(lcd_enable);
 	delay_ms(15);				// Stabilize the LCD
