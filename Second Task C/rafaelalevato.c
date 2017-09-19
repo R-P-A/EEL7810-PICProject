@@ -52,19 +52,20 @@ void main() {
 
 	int int_counter_rb = 0;
 	char lcd_string[18];
-	sprintf(lcd_string, "Int B: %d", int_counter_rb);
+	write_string_lcd("Interrupt PORTB");
+	start_character(2,1);
+	sprintf(lcd_string, "Counter: %d", int_counter_rb);
 	write_string_lcd(lcd_string);
 
 	while(true) {
 		if (interrupt_portb_flag) {
 			interrupt_portb_flag = false;
-			// This interruption is on change, so we check if button is pressed to count only once
-			if (button_1 == 0 || button_2 == 0  || button_3 == 0  || button_4 == 0 ) {
-				int_counter_rb++;
-				clear_lcd();
-				sprintf(lcd_string, "Int B: %d", int_counter_rb);
-				write_string_lcd(lcd_string);
-			}
+			int_counter_rb++;
+			clear_lcd();
+			write_string_lcd("Interrupt PORTB");
+			start_character(2,1);
+			sprintf(lcd_string, "Counter: %d", int_counter_rb);
+			write_string_lcd(lcd_string);
 		}
 
 		if (interrupt_timer1_flag) {
