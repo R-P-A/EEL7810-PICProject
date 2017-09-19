@@ -1,7 +1,6 @@
 /** 
  *	@author  Rafael Pintar Alevato
- *	@date    17/09/2017
- *	@version 0.9 
+ *	@date    18/09/2017
  *	
  *	@brief Functions to use LCD for PIC16F628A.
  */
@@ -62,6 +61,10 @@ void write_char_lcd(char c) {
 	send_byte_lcd(1,c);
 }
 
+/**
+ *	Send a string to the LCD.
+ *	@param string String pointer to be written on LCD
+ */
 void write_string_lcd(char* string) {
 	for (int i = 0; string[i] != '\0'; i++ ) {
 		write_char_lcd(string[i]);
@@ -74,9 +77,7 @@ void clear_lcd() {
 	return;
 }
 
-/**	Initialize LCD with cursor ready to write a character.
- *	The parameters are the pins for data. Always call this first.
- */
+/**	Initialize LCD with cursor ready to write a character. */
 void initialize_lcd() {
 	lcd_data_4 = 0;
 	lcd_data_5 = 0;
@@ -98,15 +99,16 @@ void initialize_lcd() {
 
 /**
  *	Defines the position of the next character to be written.
- *	@param c Character to be written on LCD
+ *	@param line Line 1 or 2 of the LCD
+ *	@param column Column of the LCD 1-16
  */
 void start_character(int line, int column) {
 	int position = 0;
 	// Choose the correct line
 	if (line == 1)
-		position=0x80;
+		position = 0x80;
 	if(line == 2)
-		position=0xc0;
+		position = 0xc0;
 
 	// Sum the column to the line position. Subtract 1 to write on the right place.
 	position = position + column;

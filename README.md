@@ -10,6 +10,6 @@ We only utilize Proteus to emulate the microprocessor.
 ## Tools:
 
 * [Sublime Text 3 (coding)](https://www.sublimetext.com/3)
-* [MPLab IDE v8.70](http://www.microchip.com/development-tools/downloads-archive) (debugging)
-* [CCS Optimizing C Compiler](http://www.ccsinfo.com/ccsfreedemo.php)
+* [MPLAB X IDE v4.01](http://www.microchip.com/development-tools/downloads-archive) (debugging)
+* [MPLAB XC8 Compiler v1.43](http://www.microchip.com/mplab/compilers)
 * Proteus (ISIS) for the emulations
