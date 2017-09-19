@@ -1,14 +1,20 @@
-#include <16F628A.h>	// Include microcontroller PIC16F628A library
+#define _XTAL_FREQ 4000000
 
-// Fuses configuration
-#FUSES NOWDT			// Watch Dog Timer Off
-#FUSES HS				// Crystal Oscillator 4 MHz to 20 MHZ
-#FUSES PUT				// Power Up Timer Enabled (Wait some time in Reset before initiating)
-#FUSES NOPROTECT		// No protection for code memory from reading
-#FUSES BROWNOUT			// Reset when source voltage falls under a limit
-#FUSES NOMCLR			// Master Clear Pin disabled
-#FUSES NOLVP			// Low voltage programming disabled
-#FUSES NOCPD			// No protection for EEPROM from read/write
-#FUSES INTRC_IO			// Internal Oscillator
+#include <xc.h>
 
-#use delay(clock=4000000)	  // Define which clock we will utilize
+// PIC16F628A Configuration Bit Settings
+#pragma config FOSC = HS        // Oscillator Selection bits (HS oscillator: High-speed crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN)
+#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
+#pragma config PWRTE = ON       // Power-up Timer Enable bit (PWRT enabled)
+#pragma config MCLRE = OFF      // RA5/MCLR/VPP Pin Function Select bit (RA5/MCLR/VPP pin function is digital input, MCLR internally tied to VDD)
+#pragma config BOREN = ON       // Brown-out Detect Enable bit (BOD enabled)
+#pragma config LVP = OFF        // Low-Voltage Programming Enable bit (RB4/PGM pin has digital I/O function, HV on MCLR must be used for programming)
+#pragma config CPD = OFF        // Data EE Memory Code Protection bit (Data memory code protection off)
+#pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
+
+#define true 1
+#define false 0
+
+int_bit_test(int value, int pos) {
+	return (value >> pos) & 1;
+}

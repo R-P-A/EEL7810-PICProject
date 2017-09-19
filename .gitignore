@@ -4,7 +4,6 @@
 *.err
 *.ccspjt
 *.cof
-*.hex
 *.lst
 *.STA
 *.sym
@@ -14,3 +13,4 @@
 *.DBK
 *.SDF
 *.PWI
+second_task.X
