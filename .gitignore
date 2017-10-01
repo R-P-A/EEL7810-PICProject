@@ -2,6 +2,7 @@
 *.mcs
 *.mcw
 *.err
+*.elf
 *.ccspjt
 *.cof
 *.lst
@@ -14,3 +15,4 @@
 *.SDF
 *.PWI
 second_task.X
+third_task.X

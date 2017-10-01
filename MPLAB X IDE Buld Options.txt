@@ -1,0 +1,2 @@
+// Create a .hex in the main project folder. The name can be changed.
+cp ${ImagePath} ${ImageDir}\..\..\..\rafaelalevato.hex
