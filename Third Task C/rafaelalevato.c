@@ -22,6 +22,8 @@ bit interrupt_portb_flag = false;
 bit interrupt_timer1_flag = false;
 bit second_timer1_pass = false;
 
+eeprom int int_counter_rb = 0;
+
 void main() {
 
 	// Ins and Outs of ports A and B. 0 => output / 1 => input
@@ -44,7 +46,6 @@ void main() {
 	initialize_lcd();
 	clear_lcd();
 
-	int int_counter_rb = 0;
 	char lcd_string[18];
 	write_string_lcd("Counter");
 	start_character(2,1);
