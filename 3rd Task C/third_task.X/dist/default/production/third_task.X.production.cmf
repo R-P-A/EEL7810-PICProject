@@ -1,0 +1,584 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\third_task.X.production.obj
+cinit CODE 0 11 11 3 2
+text1 CODE 0 2F7 2F7 35 2
+text2 CODE 0 442 442 10 2
+text3 CODE 0 394 394 2C 2
+text4 CODE 0 14 14 117 2
+text5 CODE 0 32C 32C 34 2
+text6 CODE 0 27E 27E 3E 2
+text7 CODE 0 18C 18C 55 2
+text8 CODE 0 418 418 16 2
+text9 CODE 0 360 360 34 2
+text10 CODE 0 1E1 1E1 52 2
+text11 CODE 0 401 401 17 2
+text12 CODE 0 452 452 E 2
+text13 CODE 0 2BC 2BC 3B 2
+text14 CODE 0 42E 42E 14 2
+text15 CODE 0 3C0 3C0 27 2
+text16 CODE 0 3E7 3E7 1A 2
+maintext CODE 0 12B 12B 61 2
+cstackCOMMON COMMON 1 70 70 9 1
+cstackBANK0 BANK0 1 20 20 2C 1
+intentry CODE 0 4 4 C 2
+bitbssCOMMON COMMON 1 3C8 79 3 1
+strings STRING 0 233 233 4B 2
+bssEEDATA EEDATA 3 0 2100 2 2
+$C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+reset_vec CODE 0 0 0 1 2
+end_init CODE 0 10 10 1 2
+config CONFIG 0 2007 2007 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 4C-6F 1
+RAM A0-EF 1
+RAM 120-14F 1
+BANK0 4C-6F 1
+BANK1 A0-EF 1
+BANK2 120-14F 1
+CONST 1-3 2
+CONST 460-7FF 2
+ENTRY 1-3 2
+ENTRY 460-7FF 2
+IDLOC 2000-2003 2
+STACK A0-EF 1
+CODE 1-3 2
+CODE 460-7FF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-1EF 1
+COMMON 7A-7D 1
+EEDATA 2102-217F 2
+STRCODE 1-3 2
+STRCODE 460-7FF 2
+STRING 1-3 2
+STRING 460-7FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\third_task.X.production.obj
+11 cinit CODE >474:C:\Users\rpaal\AppData\Local\Temp\s4ck.
+11 cinit CODE >477:C:\Users\rpaal\AppData\Local\Temp\s4ck.
+11 cinit CODE >501:C:\Users\rpaal\AppData\Local\Temp\s4ck.
+12 cinit CODE >507:C:\Users\rpaal\AppData\Local\Temp\s4ck.
+12 cinit CODE >509:C:\Users\rpaal\AppData\Local\Temp\s4ck.
+13 cinit CODE >510:C:\Users\rpaal\AppData\Local\Temp\s4ck.
+4 intentry CODE >76:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+3E7 text16 CODE >76:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+3E7 text16 CODE >78:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+3EF text16 CODE >79:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+3F0 text16 CODE >80:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+3F4 text16 CODE >81:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+3F5 text16 CODE >85:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+3C0 text15 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3C1 text15 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3C5 text15 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3C9 text15 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3CB text15 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3D0 text15 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3D2 text15 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3D6 text15 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3D7 text15 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3E2 text15 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+3E6 text15 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+42E text14 CODE >104:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+431 text14 CODE >107:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+43B text14 CODE >108:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2BC text13 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2BD text13 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2C1 text13 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2C5 text13 CODE >44:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2C8 text13 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2CC text13 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2D1 text13 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2D5 text13 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2DE text13 CODE >51:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2E2 text13 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2E8 text13 CODE >53:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2EB text13 CODE >54:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2ED text13 CODE >55:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2EF text13 CODE >56:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2F0 text13 CODE >57:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2F1 text13 CODE >58:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+2F6 text13 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+452 text12 CODE >135:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+455 text12 CODE >137:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+401 text11 CODE >3:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/pic_config.c
+401 text11 CODE >4:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/pic_config.c
+1E1 text10 CODE >3:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1E1 text10 CODE >5:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1F4 text10 CODE >6:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+206 text10 CODE >7:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+218 text10 CODE >8:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+22A text10 CODE >11:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+22B text10 CODE >12:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+22F text10 CODE >13:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+360 text9 CODE >17:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+360 text9 CODE >18:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+36B text9 CODE >19:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+372 text9 CODE >20:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+375 text9 CODE >21:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+383 text9 CODE >22:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+38C text9 CODE >23:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+418 text8 CODE >38:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+418 text8 CODE >39:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+422 text8 CODE >40:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+18C text7 CODE >44:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+18C text7 CODE >45:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+18F text7 CODE >46:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+190 text7 CODE >47:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+191 text7 CODE >48:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+192 text7 CODE >49:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+193 text7 CODE >50:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+194 text7 CODE >51:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+19F text7 CODE >52:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1A6 text7 CODE >53:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1B1 text7 CODE >54:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1B8 text7 CODE >55:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1C1 text7 CODE >56:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1CB text7 CODE >57:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1D5 text7 CODE >58:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+1D6 text7 CODE >59:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+27E text6 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+27E text6 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+282 text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+286 text6 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+288 text6 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+28A text6 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+291 text6 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+295 text6 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+296 text6 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+29D text6 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+2A5 text6 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+2AB text6 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+2AC text6 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+2B3 text6 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+2B7 text6 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwdiv.c
+32C text5 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+32C text5 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+332 text5 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+334 text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+336 text5 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+33D text5 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+341 text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+342 text5 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+34A text5 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+350 text5 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+357 text5 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+35B text5 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\lwmod.c
+14 text4 CODE >492:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+17 text4 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+1B text4 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+27 text4 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+2B text4 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+36 text4 CODE >542:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+37 text4 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+38 text4 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+39 text4 CODE >718:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+39 text4 CODE >721:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+3A text4 CODE >723:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+3B text4 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+52 text4 CODE >822:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+52 text4 CODE >1251:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+54 text4 CODE >1259:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+60 text4 CODE >1261:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+62 text4 CODE >1262:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+66 text4 CODE >1263:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+6B text4 CODE >1266:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+6C text4 CODE >1286:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+78 text4 CODE >1294:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+79 text4 CODE >1299:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+79 text4 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+7F text4 CODE >1306:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+90 text4 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+95 text4 CODE >1314:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+95 text4 CODE >1316:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+9B text4 CODE >1317:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+AC text4 CODE >1316:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+B1 text4 CODE >1294:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+BA text4 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+BE text4 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+C9 text4 CODE >1472:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+CD text4 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+CE text4 CODE >1489:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+EE text4 CODE >1500:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+103 text4 CODE >1504:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+10A text4 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+115 text4 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+11C text4 CODE >1476:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+125 text4 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+126 text4 CODE >1538:C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\doprnt.c
+394 text3 CODE >63:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+394 text3 CODE >64:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+398 text3 CODE >66:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+39C text3 CODE >67:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+3A0 text3 CODE >68:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+3A5 text3 CODE >69:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+3A9 text3 CODE >72:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+3B1 text3 CODE >73:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+3B7 text3 CODE >75:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+442 text2 CODE >27:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+445 text2 CODE >28:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+451 text2 CODE >29:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+2F7 text1 CODE >32:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+2F7 text1 CODE >33:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+310 text1 CODE >34:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+323 text1 CODE >33:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/lcd.c
+12B maintext CODE >27:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+12B maintext CODE >30:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+12E maintext CODE >31:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+12F maintext CODE >34:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+132 maintext CODE >35:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+133 maintext CODE >38:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+134 maintext CODE >39:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+135 maintext CODE >40:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+138 maintext CODE >41:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+13B maintext CODE >42:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+13C maintext CODE >43:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+13D maintext CODE >44:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+13E maintext CODE >46:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+13F maintext CODE >47:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+140 maintext CODE >50:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+147 maintext CODE >51:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+152 maintext CODE >52:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+16A maintext CODE >53:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+171 maintext CODE >56:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+173 maintext CODE >57:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+174 maintext CODE >59:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+176 maintext CODE >60:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+177 maintext CODE >61:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+17B maintext CODE >62:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+18A maintext CODE >68:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+18A maintext CODE >69:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+18B maintext CODE >55:D:\Google Drive\Educação\UFSC\Graduação Engenharia Elétrica\17.2\Projeto Nível I em Área Básica I (EEL7810)\Projects\Third Task C/rafaelalevato.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__end_of_write_string_lcd 658 0 CODE 0 text1 dist/default/production\third_task.X.production.obj
+___lwmod@counter 28 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__Hspace_0 2008 0 ABS 0 - -
+__Hspace_1 3CB 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 2 0 ABS 0 - -
+_send_byte_lcd 6C0 0 CODE 0 text9 dist/default/production\third_task.X.production.obj
+__size_of_write_string_lcd 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__end_of_send_nibble_lcd 466 0 CODE 0 text10 dist/default/production\third_task.X.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__size_of_memcpyee 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__end_of_bit_test_int 830 0 CODE 0 text11 dist/default/production\third_task.X.production.obj
+_RD 4E0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_WR 4E1 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+_interrupt_timer1_flag 3C9 -34F COMMON 1 bitbssCOMMON dist/default/production\third_task.X.production.obj
+_PEIE 5E 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_TMR1 E 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_WREN 4E2 0 ABS 0 - dist/default/production\third_task.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+_main 256 0 CODE 0 maintext dist/default/production\third_task.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\third_task.X.production.obj
+start 20 0 CODE 0 init C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+__size_of___eetoi 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+memcpyee@to 78 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+__size_of___itoee 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__end_of_write_char_lcd 8A4 0 CODE 0 text2 dist/default/production\third_task.X.production.obj
+?_bit_test_int 74 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+__HbssEEDATA 0 0 ABS 0 bssEEDATA -
+__Hpowerup 0 0 CODE 0 powerup -
+__pbitbssCOMMON 3C8 -34F COMMON 1 bitbssCOMMON dist/default/production\third_task.X.production.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_send_nibble_lcd 3C2 0 CODE 0 text10 dist/default/production\third_task.X.production.obj
+__Hfunctab 0 0 ENTRY 0 functab -
+__LbssEEDATA 0 0 ABS 0 bssEEDATA -
+_memcpyee 578 0 CODE 0 text13 dist/default/production\third_task.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+_interrupt_service_routine 7CE 0 CODE 0 text16 dist/default/production\third_task.X.production.obj
+start_character@column 2C 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+main@lcd_string 3A 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__end_of_memcpyee 5EE 0 CODE 0 text13 dist/default/production\third_task.X.production.obj
+__size_of_send_byte_lcd 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_EECON1 9C 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_EECON2 9D 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_EEDATA 9A 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+___lwmod@divisor 23 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__end_of___eetoi 884 0 CODE 0 text14 dist/default/production\third_task.X.production.obj
+__end_of___itoee 8C0 0 CODE 0 text12 dist/default/production\third_task.X.production.obj
+__end_of___lwdiv 578 0 CODE 0 text6 dist/default/production\third_task.X.production.obj
+__end_of___lwmod 6C0 0 CODE 0 text5 dist/default/production\third_task.X.production.obj
+memcpyee@ptr 77 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+_dpowers 486 0 STRING 0 strings dist/default/production\third_task.X.production.obj
+_initialize_lcd 318 0 CODE 0 text7 dist/default/production\third_task.X.production.obj
+___lwdiv@quotient 20 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__end_of_send_byte_lcd 728 0 CODE 0 text9 dist/default/production\third_task.X.production.obj
+___lwmod@dividend 25 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+start_initialization 22 0 CODE 0 cinit dist/default/production\third_task.X.production.obj
+__end_of_hexpowers 4AA 0 STRING 0 strings dist/default/production\third_task.X.production.obj
+__size_of_send_nibble_lcd 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+bit_test_int@pos 76 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+send_nibble_lcd@data 23 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+_TMR1CS 81 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_TMR1IE 460 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_TMR1IF 60 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_TMR1ON 80 0 ABS 0 - dist/default/production\third_task.X.production.obj
+write_string_lcd@string 2D 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+start_character@line 2A 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+_hexpowers 49A 0 STRING 0 strings dist/default/production\third_task.X.production.obj
+send_byte_lcd@data_type 25 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+__end_of_initialize_lcd 3C2 0 CODE 0 text7 dist/default/production\third_task.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Hcinit 28 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__stringbase 484 0 STRING 0 strings dist/default/production\third_task.X.production.obj
+___lwdiv@counter 22 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__end_of_start_character 780 0 CODE 0 text3 dist/default/production\third_task.X.production.obj
+send_byte_lcd@data 27 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__end_of_sprintf 256 0 CODE 0 text4 dist/default/production\third_task.X.production.obj
+eecpymem@from 74 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+eecpymem@size 75 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 BANK3 1 bank3 -
+__Lcinit 22 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+start_character@position 2E 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 20 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 20 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_int_counter_rb 0 4200 EEDATA 3 bssEEDATA dist/default/production\third_task.X.production.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_GIE 5F 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_RB0 30 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_RB1 31 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_RB2 32 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_RB4 34 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_RB5 35 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_RB6 36 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_RB7 37 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__S0 2008 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 2102 0 ABS 0 - -
+___eetoi@addr 26 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+___eetoi@data 24 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__size_of_write_char_lcd 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+saved_w 7E 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_second_timer1_pass 3C8 -34F COMMON 1 bitbssCOMMON dist/default/production\third_task.X.production.obj
+_start_character 728 0 CODE 0 text3 dist/default/production\third_task.X.production.obj
+sprintf@idx 31 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+sprintf@val 36 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+__stringtab 466 0 STRING 0 strings dist/default/production\third_task.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+__size_of_eecpymem 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+sprintf@flag 34 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+sprintf@prec 33 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__ptext10 3C2 0 CODE 0 text10 dist/default/production\third_task.X.production.obj
+__ptext11 802 0 CODE 0 text11 dist/default/production\third_task.X.production.obj
+__ptext12 8A4 0 CODE 0 text12 dist/default/production\third_task.X.production.obj
+__ptext13 578 0 CODE 0 text13 dist/default/production\third_task.X.production.obj
+__ptext14 85C 0 CODE 0 text14 dist/default/production\third_task.X.production.obj
+__ptext15 780 0 CODE 0 text15 dist/default/production\third_task.X.production.obj
+__ptext16 7CE 0 CODE 0 text16 dist/default/production\third_task.X.production.obj
+___eetoi 85C 0 CODE 0 text14 dist/default/production\third_task.X.production.obj
+___itoee 8A4 0 CODE 0 text12 dist/default/production\third_task.X.production.obj
+___lwdiv 4FC 0 CODE 0 text6 dist/default/production\third_task.X.production.obj
+___lwmod 658 0 CODE 0 text5 dist/default/production\third_task.X.production.obj
+__pmaintext 256 0 CODE 0 maintext dist/default/production\third_task.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 400E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+write_string_lcd@i 32 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__end_of_clear_lcd 85C 0 CODE 0 text8 dist/default/production\third_task.X.production.obj
+___lwdiv@divisor 74 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+__size_of_clear_lcd 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+stackhi 0 0 ABS 0 - C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+stacklo 0 0 ABS 0 - C:\Users\rpaal\AppData\Local\Temp\s4ck.obj
+_eecpymem 780 0 CODE 0 text15 dist/default/production\third_task.X.production.obj
+__end_of__stringtab 486 0 STRING 0 strings dist/default/production\third_task.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__HbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_clear_lcd 830 0 CODE 0 text8 dist/default/production\third_task.X.production.obj
+__Lend_init 20 0 CODE 0 end_init -
+__end_of_eecpymem 7CE 0 CODE 0 text15 dist/default/production\third_task.X.production.obj
+__size_of_start_character 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pbssEEDATA 0 4200 EEDATA 3 bssEEDATA dist/default/production\third_task.X.production.obj
+___itoee@addr 2B 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+___itoee@data 27 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+end_of_initialization 24 0 CODE 0 cinit dist/default/production\third_task.X.production.obj
+__Hintentry 20 0 CODE 0 intentry -
+bit_test_int@value 74 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+__Lstrings 0 0 ABS 0 strings -
+___lwdiv@dividend 76 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+?___eetoi 20 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+?___lwdiv 74 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+?___lwmod 23 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__Hreset_vec 2 0 CODE 0 reset_vec -
+write_char_lcd@c 2C 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__ptext1 5EE 0 CODE 0 text1 dist/default/production\third_task.X.production.obj
+__ptext2 884 0 CODE 0 text2 dist/default/production\third_task.X.production.obj
+__ptext3 728 0 CODE 0 text3 dist/default/production\third_task.X.production.obj
+__ptext4 28 0 CODE 0 text4 dist/default/production\third_task.X.production.obj
+__ptext5 658 0 CODE 0 text5 dist/default/production\third_task.X.production.obj
+__ptext6 4FC 0 CODE 0 text6 dist/default/production\third_task.X.production.obj
+__ptext7 318 0 CODE 0 text7 dist/default/production\third_task.X.production.obj
+__ptext8 830 0 CODE 0 text8 dist/default/production\third_task.X.production.obj
+__ptext9 6C0 0 CODE 0 text9 dist/default/production\third_task.X.production.obj
+_sprintf 28 0 CODE 0 text4 dist/default/production\third_task.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__end_of_interrupt_service_routine 802 0 CODE 0 text16 dist/default/production\third_task.X.production.obj
+sprintf@ap 32 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+sprintf@sp 35 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec -
+memcpyee@from 74 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+memcpyee@size 75 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_write_string_lcd 5EE 0 CODE 0 text1 dist/default/production\third_task.X.production.obj
+__size_of_initialize_lcd 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__end_of__initialization 24 0 CODE 0 cinit dist/default/production\third_task.X.production.obj
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__CFG_PWRTE$ON 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_T1CKPS0 84 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_T1CKPS1 85 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_bit_test_int 802 0 CODE 0 text11 dist/default/production\third_task.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+__Hend_init 22 0 CODE 0 end_init -
+sprintf@c 38 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+sprintf@f 29 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+__end_of_main 318 0 CODE 0 maintext dist/default/production\third_task.X.production.obj
+_CARRY 18 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__end_of_dpowers 49A 0 STRING 0 strings dist/default/production\third_task.X.production.obj
+_EEADR 9B 0 ABS 0 - dist/default/production\third_task.X.production.obj
+?_sprintf 29 0 BANK0 1 cstackBANK0 dist/default/production\third_task.X.production.obj
+_PORTA 5 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_PORTB 6 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_TRISA 85 0 ABS 0 - dist/default/production\third_task.X.production.obj
+_TRISB 86 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+interrupt_function 8 0 CODE 0 intentry dist/default/production\third_task.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production\third_task.X.production.obj
+eecpymem@cp 77 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+eecpymem@to 78 0 COMMON 1 cstackCOMMON dist/default/production\third_task.X.production.obj
+__LbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
+__initialization 22 0 CODE 0 cinit dist/default/production\third_task.X.production.obj
+_write_char_lcd 884 0 CODE 0 text2 dist/default/production\third_task.X.production.obj
+__size_of_interrupt_service_routine 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+__pstrings 466 0 STRING 0 strings dist/default/production\third_task.X.production.obj
+__size_of_bit_test_int 0 0 ABS 0 - dist/default/production\third_task.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text6 0 27E 4FC 1E2 2
+cstackCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 2C 1
+intentry 0 4 8 22F 2
+reset_vec 0 0 0 1 2
+strings 0 233 466 4B 2
+bssEEDATA 3 0 4200 2 2
+config 0 2007 400E 1 2

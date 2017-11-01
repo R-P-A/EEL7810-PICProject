@@ -1,0 +1,134 @@
+;UNIVERSIDADE FEDERAL DE SANTA CATARINA
+; EEL7810 - Projeto Nivel I em Area Basica I
+;
+; NOME 
+
+
+
+; Ler um valor de tensao colocada na entrada do AD 
+; por meio de um potenciometro
+
+
+; TAREFA
+
+;1 Se a tensao for menor que 1v ligar o led Vermelho na porta b0 - 
+;2 se a tensao for entre 1 v e 2v ligar o led verde na porta b1
+;3 se a tensao for entre 2 e 3v ligar o led amarelo na porta b2
+;4 se a tensao for entre 3 e 4v ligar o led verde na porta b2
+;5 se a tensao for acima de 4v LIGAR TODOS os leds na porta b2
+
+;6 Usar o valor lido para controlar o PWM em B3
+;7 Colocar uma chave para selecionar entre dois potenciometros de entrada
+; Um Potenciometro de alta resolucao e um normal
+; 8 - Verificar qual é a resolucao com cada potenciometro ( variacao minima da tensao com a mudança no pot)
+; 9 - Identificar quais as configuraçoes usadas para o conversor AD ( onde esta marcado com ???)
+
+	include "p16f819.inc"
+;    __CONFIG 2FFFh ; define rb3 saida pwm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;COMANDOS PARA ALTERACAO DE PAGINA DE MEMORIA
+BANCO0	MACRO						;MACRO PARA SELECIONAR BANCO 0
+		BCF		STATUS,RP0
+		BCF		STATUS,RP1
+	ENDM							;FIM DA MACRO BANCO 0
+
+BANCO1	MACRO						;MACRO PARA SELECIONAR BANCO 1
+		BSF		STATUS,RP0
+		BCF		STATUS,RP1
+	ENDM							;FIM DA MACRO BANCO 1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+	cblock 0x20
+ 		VLIDO
+		var1
+	endc
+
+	org 00
+		goto inicio
+
+	org 04 
+    	RETFIE   ; Sem interrupcao
+
+inicio
+
+	BANCO1
+	movlw 0xff
+	movwf TRISA   ; porta A como entrada
+	movlw 0x00
+	movwf TRISB ; porta B como saida
+
+	BANCO0
+	movlw 0x00
+	movwf PORTB ; zerar saidas na porta B
+
+leitura
+	; Definicoes sobre o CAD
+	BANCO1
+	movlw b'01001010' ; ???????????????????????????????????????
+	movwf ADCON1
+	
+	BANCO0
+	movlw b'00000000' ;  ?????????????????????????????????
+	movwf ADCON0
+	bsf ADCON0,0 ; ativa o conv. ad
+
+; delay para aquisicao
+	movlw 0xff
+	movwf var1
+delay
+	decfsz var1
+	goto delay
+
+	bsf ADCON0,2 	; inicia a conv.
+
+espera 				; espera a conversão  terminar
+	btfsc ADCON0,2
+	goto espera
+	movfw ADRESH
+	movwf VLIDO     ;  Leitura do AD
+
+  
+faixa1 ; entre 0 e 1 - acende B0
+      
+	sublw 0x33 ; 33 - vlido ; 1,0V
+	btfsc STATUS,0
+	goto acende1
+	goto faixa2
+
+acende1
+	bsf PORTB,0
+	bcf PORTB,1
+	bcf PORTB,2
+    
+; ou 
+ ;   movlw 0x01
+;	movwf PORTB ; zerar outras saidas na porta B
+   goto leitura
+
+faixa2 ; entre 1 e 1,5 - apaga
+	movfw VLIDO
+	sublw 0x4d ; 1,5V
+	btfsc STATUS,0
+	goto acende2
+	goto faixa3
+
+acende2
+	bcf PORTB,0
+	bsf PORTB,1
+	bcf PORTB,2
+	goto leitura
+
+faixa3 ; ente 1,5 e 3 - acende b1
+	movfw VLIDO
+	sublw 0x9a ; 3,0V
+	btfsc STATUS,0
+	goto acende3
+	goto leitura
+
+acende3
+	bcf PORTB,0
+	bcf PORTB,1
+	bsf PORTB,2
+	goto leitura
+
+end
