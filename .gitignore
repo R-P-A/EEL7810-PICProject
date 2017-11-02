@@ -14,5 +14,4 @@
 *.DBK
 *.SDF
 *.PWI
-second_task.X
-third_task.X
+*.X/
