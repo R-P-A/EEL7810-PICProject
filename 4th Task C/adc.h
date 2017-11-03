@@ -1,6 +1,6 @@
 /** 
  *	@author  Rafael Pintar Alevato
- *	@date    18/09/2017
+ *	@date    02/11/2017
  *	
  *	@brief A/D Module configuration for PIC16F819.
  */
