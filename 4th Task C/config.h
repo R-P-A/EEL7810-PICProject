@@ -20,7 +20,7 @@
 #pragma config LVP = OFF		// Low-Voltage Programming Enable bit (RB3/PGM pin has digital I/O function, HV on MCLR must be used for programming)
 #pragma config CPD = OFF		// Data EE Memory Code Protection bit (Code protection off)
 #pragma config WRT = OFF		// Flash Program Memory Write Enable bits (Write protection off)
-#pragma config CCPMX = RB2		// CCP1 Pin Selection bit (CCP1 function on RB2)
+#pragma config CCPMX = RB3		// CCP1 Pin Selection bit (CCP1 function on RB3)
 #pragma config CP = OFF			// Flash Program Memory Code Protection bit (Code protection off)
 
 #include <xc.h>
