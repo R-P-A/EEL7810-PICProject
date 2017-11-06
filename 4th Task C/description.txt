@@ -14,7 +14,7 @@
 ;1 Se a tensao for menor que 1v ligar o led Vermelho na porta b0 - 
 ;2 se a tensao for entre 1 v e 2v ligar o led verde na porta b1
 ;3 se a tensao for entre 2 e 3v ligar o led amarelo na porta b2
-;4 se a tensao for entre 3 e 4v ligar o led verde na porta b2
+;4 se a tensao for entre 3 e 4v ligar o led azul na porta b2
 ;5 se a tensao for acima de 4v LIGAR TODOS os leds na porta b2
 
 ;6 Usar o valor lido para controlar o PWM em B3
