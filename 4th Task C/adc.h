@@ -13,13 +13,14 @@
 
 /**
  *	Initiate the ADC module.
+ *	@param port_config Analogic input port configurations (PCFG), see datasheet for the table. Values can be 0-15
  */
-void adc_init();
+void adc_init(unsigned int port_config);
 
 /**
  *	Read a analog input from a channel (PORTA).
- *	@param Channel to read (RA0-RA7)
- *	@return Value read by the ADC
+ *	@param channel Channel to read (range is 0-7)
+ *	@return value Value read by the ADC
  */
 unsigned int adc_read(unsigned char channel);
 

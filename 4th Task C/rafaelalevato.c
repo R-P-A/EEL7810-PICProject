@@ -10,6 +10,7 @@
  *			> One varying the voltage from 0 to 5 V with an increment of 0,5 V
  *			> Other varying the voltage from 0 to 5 V with an increment of 0,05 V
  *		- The voltage read by the ADC is used to control a PWM on port B3. There is a yellow led on that port.
+ 		- The period of the PWM is 4,096 ms for a clock of 4 MHz.
  *		- If the voltage is less than 1 V, turn on the red led on port B0
  *		- If the voltage is greater or equal than 1 V and less than 2 V, turn on the green led on port B1
  *		- If the voltage is greater or equal than 2 V and less than 3 V, turn on the yellow led on port B2
@@ -20,29 +21,22 @@
 #include <stdio.h>
 #include "config.h"
 #include "adc.h"
+#include "pwm.h"
 
 // Led blinked by the timer1 interruption
 #define blink_led RB0
 
 void main() {
 
-	adc_init();
+	// Setting only port RA0 as anlog input (AN0)
+	adc_init(0b1110);
 
 	// Ins and Outs of ports A and B. 0 => output / 1 => input
 	TRISA = 0b00000001;
 	TRISB = 0b00000000;
 
-	// Timer 2 configuration for PWM. This configurations sets the period high to be able to see the led blinking.
-	TMR2ON = 1;
-	T2CKPS1 = 1;
-	T2CKPS0 = 1;
-	PR2 = 0xFF;
-
-	// PWM Configuration on port RB3
-	CCP1M3 = 1;
-	CCP1M2 = 1;
-	CCP1M1 = 0;
-	CCP1M0 = 0;
+	// This configurations sets the period high to be able to see the led blinking.
+	pwm_init(0.004096);
 
 	// Make sure no other pin from PORTB is set.
 	PORTB = 0b00000000;
